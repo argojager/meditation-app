@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditazione Guidata</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Meditazione Guidata</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('profile')">Profilo</a></li>
+                <li><a href="#" onclick="showSection('meditation')">Meditazione</a></li>
+                <li><a href="#" onclick="showSection('statistics')">Statistiche</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="profile" class="hidden">
+                <h2>Profilo Utente</h2>
+                <label for="username">Nome utente:</label>
+                <input type="text" id="username" placeholder="Inserisci il tuo nome">
+                <button onclick="saveProfile()">Salva</button>
+            </section>
+            <section id="meditation">
+                <div class="session-select">
+                    <label for="session">Seleziona una sessione:</label>
+                    <select id="session">
+                        <option value="5">Meditazione di 5 minuti</option>
+                        <option value="10">Meditazione di 10 minuti</option>
+                        <option value="15">Meditazione di 15 minuti</option>
+                    </select>
+                    <button onclick="showFrequencyOptions()">Avanti</button>
+                </div>
+                <div id="frequency-select" class="hidden">
+                    <label for="frequency">Seleziona una frequenza:</label>
+                    <select id="frequency">
+                        <option value="theta">Onde Theta (4-8 Hz): Rilassamento, sollievo dallo stress, sonno</option>
+                        <option value="alpha">Onde Alpha (8-12 Hz): Rilassamento, meditazione, creatività</option>
+                        <option value="beta">Onde Beta (12-30 Hz): Concentrazione, attenzione, apprendimento</option>
+                        <option value="gamma">Onde Gamma (30+ Hz): Veglia, prontezza cognitiva, elaborazione delle informazioni</option>
+                    </select>
+                    <button onclick="startSession()">Inizia</button>
+                </div>
+                <div id="session-display" class="hidden">
+                    <h2>Sessione di Meditazione</h2>
+                    <p id="session-time"></p>
+                    <p id="frequency-type"></p>
+                    <p id="timer"></p>
+                    <button id="end-session" onclick="endSession()">Termina</button>
+                </div>
+            </section>
+            <section id="statistics" class="hidden">
+                <h2>Statistiche</h2>
+                <p id="stats"></p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Meditazione Guidata</p>
+        </footer>
+    </div>
+    <audio id="meditation-audio"></audio>
+    <script src="scripts.js"></script>
+</body>
+</html>

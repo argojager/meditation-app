@@ -1,0 +1,145 @@
+body {
+    font-family: 'Arial, sans-serif';
+    background-image: url('background.jpg'); /* Sostituisci con il percorso della tua immagine */
+    background-size: cover; /* Copre l'intero sfondo */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+    background-attachment: fixed; /* L'immagine rimane fissa durante lo scorrimento */
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #6a0dad;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #00aaff;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+section:not(.hidden) {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+button {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #008fcc;
+}
+
+button#end-session {
+    background-color: #ff4444;
+}
+
+button#end-session:hover {
+    background-color: #cc0000;
+}
+
+input[type="text"], select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    background-color: white;
+}
+
+#session-display {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#timer {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#session-time, #frequency-type {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+#meditation-audio {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
