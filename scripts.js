@@ -3,11 +3,12 @@ let currentInterval;
 
 // Mappa delle frequenze ai file audio
 const audioFiles = {
+    'schumann': 'audio/schumann_resonance.mp3',
     'theta': 'audio/theta_meditation.mp3',
     'alpha': 'audio/alpha_relaxation.mp3',
-    'beta': 'audio/beta_focus.mp3',
-    'gamma': 'audio/gamma_awareness.mp3'
+    'beta': 'audio/beta_focus.mp3'
 };
+
 function showSection(sectionId) {
     const sections = document.querySelectorAll('main section');
     sections.forEach(section => section.classList.add('hidden'));
